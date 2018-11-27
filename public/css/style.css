@@ -1,0 +1,184 @@
+ /* body{
+    background-color: red;
+}   */
+.bg-light{
+    background-color: white!important;
+}
+.img{
+    width:660px;
+    height:400px;
+    margin-top: 42px;
+}
+.heading-box{
+    margin-top: 100px;
+}
+h1{
+    font-size: 3.5rem;
+    color:grey;
+    margin-top:50px;
+}
+h2{
+    color:grey;
+    animation: moveInLeft 1.6s ease-out;
+}
+.heading-main{
+    animation: moveInLeft  1.6s ease-out;
+}
+@keyframes moveInLeft{
+        0% {
+            opacity: 0;
+            transform: translateX(-6rem); }
+        
+        100% {
+            opacity: 1;
+            transform: translateX(0); }
+}
+.btn{
+  width: 200px;  
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.sign{
+    width:150px;
+    height: 35px;
+    margin-top: 27px;
+    border-radius: 50px;
+    border: none;
+    background-color:#007bff;
+    
+}
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 20px;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-link.nav-sign{
+    padding-top: 4px!important;
+    color: white!important;
+    
+}
+.dropdown-item{
+    color: #007bff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+h4{
+    color: #007bff;
+}
+.card-project{
+    -webkit-box-shadow: 8px 6px 24px 1px rgba(0, 0, 0, 0.096); 
+    box-shadow: 6px 6px 24px 1px rgba(0, 0, 0, 0.171);
+    margin: 50px 100px;
+}
+
+.login-page{
+    background:url(/images/login.png);
+    width:100%;
+    
+    
+}
+
+.card-login{
+    margin: 80px;
+    background-color:rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 8px 6px 24px 1px rgba(0,0,0,0.18);  
+}
+.login-card{
+    padding: 20px;
+}
+.form-group{
+    text-align:left;
+}
+.text-center{
+    font-size: 40px;
+    margin-top: -15px;
+}
+.btn-submit{
+    background-color: #007bff;
+    color: white;
+    margin: 30px 0;
+    
+}
+.form-control{
+    border:none;
+     border-bottom: 2px solid  #007bff;
+     background-color:rgba(0, 0, 0, 0.116);
+    
+}
+
+.card-signup{
+    margin: 80px;
+    background-color:rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 8px 6px 24px 1px rgba(0,0,0,0.18);  
+}
+.signup-card{
+    padding: 20px;
+}
+
+.about-left{
+    /* background-color: #007bff;  */
+    height: 60vh;
+    
+}
+.about2-left{
+    /* background-color: #007bff;  */
+    height: 65vh;
+    
+   
+}
+.about3-left{
+    /* background-color: #007bff;  */
+    height: 65vh;
+    
+   
+}
+/* .about-right{
+    background-color: red;
+} */
+.track{
+    width: 500px;
+}
+.icons1{
+    margin-left: 500px;
+    margin-top: 20px;
+    color: gray;
+    backface-visibility: hidden;
+}
+.icn{
+    color: gray;
+    backface-visibility: hidden;
+}
+i.bx.bxl-facebook,
+i.bx.bxl-instagram,
+i.bx.bxl-twitter{
+    font-size: 20px;
+    backface-visibility: hidden;
+}
+i.bx.bxl-facebook:hover,
+i.bx.bxl-instagram:hover,
+i.bx.bxl-twitter:hover{
+    color: #007bff;
+    animation:moveInTop 0.8s ease-out;
+    backface-visibility: hidden;
+}
+@keyframes moveInTop{
+        
+    0%{
+        opacity:1;
+        transform: translateY(10px);
+        backface-visibility: hidden;
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+        backface-visibility: hidden;
+    }
+}

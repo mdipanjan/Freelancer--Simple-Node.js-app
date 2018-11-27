@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="css/style.css">
+{{#each projects}}
+    <div class="card card-body card-project">
+        <h4>{{title}}</h4>
+        <hr class="project-list">
+        <p><span>Client Name:</span>  {{client}}</p>
+        <p><span>Platform Name:</span> {{platform}}</p>
+        <p><span>Notes:</span> {{details}}</p>
+    </div>
+{{else}}
+    <p>No project listed</p>
+{{/each}}
