@@ -1,7 +1,17 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
 const router = express.Router();
+
+
+require('../models/User');
+const User = mongoose.model('users');
+
+
+
+
 
 //Body parser middleware
 router.use(bodyParser.urlencoded({ extended: false }))
@@ -24,7 +34,7 @@ router.get('/signup',(req, res)=>{
 //signup form POST
 
 router.post('/signup',(req, res)=>{
-    console.log(req.body);
+   // console.log(req.body);
 
 
 let errors = [];
@@ -45,7 +55,28 @@ if(errors.length > 0){
         password2:req.body.password2
     });
 }else{
-    res.send('passed');
+    const newUser = new User({
+        name:req.body.name,
+        email:req.body.email,
+        password:req.body.password
+    })
+    bcrypt.genSalt(10,(err,salt)=>{
+        bcrypt.hash(newUser.password,salt,(err,hash)=>{
+            if(err) throw err;
+            newUser.password = hash;
+            newUser.save()
+            .then(user=>{
+                // res.flash('success_msg','you can log in now');
+                res.redirect('/users/login');
+            })
+            .catch(err=>{
+                console.log(err);
+                return;
+            })
+        });
+    });
+    console.log(newUser);
+    
 }
 
     

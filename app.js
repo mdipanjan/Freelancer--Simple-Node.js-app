@@ -8,6 +8,11 @@ const about = require('./routes/about');
 const storyboard = require('./routes/storyboard');
 const app = express();
 
+
+//Database
+
+const db = require('./config/database');
+
 //Load the user route//
 app.use('/users',users);
 
@@ -39,7 +44,7 @@ app.use(bodyParser.json())
 
 
 //Connect to mongoose
-mongoose.connect('mongodb://localhost/freelancer-dev',{
+mongoose.connect(db.mongoURI,{
     useNewUrlParser: true 
 })
 .then(()=>console.log('mongodb connected'))
